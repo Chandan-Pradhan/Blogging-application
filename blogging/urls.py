@@ -11,5 +11,5 @@ urlpatterns = [
     path('detail/<int:pk>/', views.Detail.as_view(), name='detail'),
     path('delete/<int:todo_id>', views.delete, name='delete'),
     path('update/<int:pk>', views.Update.as_view(), name='update'),
-    path('olderposts/', views.display_older_posts, name='older')
+    path('olderposts/', views.display_older_posts, name='older'),
 ]
