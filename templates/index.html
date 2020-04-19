@@ -13,7 +13,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
             <h1>Chandan's Blog</h1>
-            <span class="subheading">A Blogging Page By Chandan</span>
+            <span class="subheading">A Blogging Application By Chandan</span>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
           {% for x in todo_items %}
-          <a href="post.html">
+          <a href="{% url 'detail' x.pk %}">
             <h2 class="post-title">
               {{x.text}}
             </h2>
@@ -43,7 +43,7 @@
         </div>
         <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          <a class="btn btn-primary float-right" href="{% url 'older' %}">Older Posts &rarr;</a>
         </div>
       </div>
     </div>

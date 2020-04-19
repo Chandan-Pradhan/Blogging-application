@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/post-bg.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1> You only live once, but if you do it right, once is enough</h1>
+<!--            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
+            <span class="meta">Posted by
+              <a href="#">— Mae West.</a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container">
+<!--    <h1>Edit Post</h1>-->
+
+<!--<form action="" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    {{ form.as_p }}-->
+<!--    <button type="submit" class="btn btn-primary">Update</button>-->
+<!--</form>-->
+
+    <form action="" method="post">
+    <h2 id="rex">Edit the blog</h2>
+
+         {% csrf_token %}
+
+            {{form.as_p}}
+
+<!--      <div class="form-group">-->
+<!--          <label for="exampleFormControlInput1">Title</label>-->
+<!--          <input type="text" name="content" class="form-control" id="exampleFormControlInput1" placeholder="Type here...">-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--          <label for="exampleFormControlTextarea1">Content</label>-->
+<!--          <textarea class="form-control" name="desp" id="exampleFormControlTextarea1" placeholder="Enter your blog here" rows="3"></textarea>-->
+<!--      </div>-->
+        <button type="submit" class="btn btn-primary mb-2">submit</button>
+</form>
+</div>
+
+
+{% endblock content %}
